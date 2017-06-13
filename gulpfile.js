@@ -1,5 +1,5 @@
-var gulp = required("gulp");
-var less = required("gulp-less");
+var gulp = require("gulp");
+var less = require("gulp-less");
 
 gulp.task("less", function() {
   gulp.src("less/style.less")
