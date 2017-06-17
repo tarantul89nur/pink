@@ -42,6 +42,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-bottom: 70px;
 }
 .main-nav {
   width: auto;
@@ -189,6 +190,9 @@ body {
   color: #fff;
 }
 @media (max-width: 1199px) {
+  .page-header {
+    margin-bottom: 50px;
+  }
   .main-nav {
     position: relative;
     border-bottom: 1px solid transparent;
@@ -284,6 +288,7 @@ body {
     background-repeat: no-repeat;
     background-position: left 174px, center -30px;
     background-size: auto, cover;
+    margin-bottom: 40px;
   }
   .main-nav {
     padding: 21px 0;
@@ -324,5 +329,471 @@ body {
   .intro__legend {
     font-size: 14px;
     line-height: 24px;
+  }
+}
+.page-information {
+  background-color: #fff;
+}
+.page-information__wrapper {
+  width: 88%;
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.page-information__slogan {
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 300;
+  text-align: center;
+  color: #283645;
+}
+.page-information__slogan:nth-child(2) {
+  max-width: 500px;
+}
+.application-capabilities {
+  padding-top: 360px;
+  background-image: url(../img/page-information-bg.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 70px;
+}
+.application-capabilities__wrapper {
+  width: 88%;
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.application-capabilities__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 240px;
+}
+.application-capabilities__item b {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+.application-capabilities__item p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+}
+.application-capabilities__item::before {
+  position: absolute;
+  bottom: 255px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 240px;
+  height: 301px;
+}
+.application-capabilities__item:nth-child(1)::before {
+  background-image: url("../img/iphone-screen-3-1@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.application-capabilities__item:nth-child(2)::before {
+  background-image: url("../img/iphone-screen-3-2@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.application-capabilities__item:nth-child(3)::before {
+  background-image: url("../img/iphone-screen-3-3@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 1199px) {
+  .page-information__wrapper {
+    margin-bottom: 40px;
+  }
+  .page-information__slogan {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .page-information__slogan:nth-child(2) {
+    max-width: 335px;
+  }
+  .application-capabilities {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+  .application-capabilities__wrapper {
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 50px;
+    margin-left: auto;
+  }
+  .application-capabilities__wrapper::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 268px;
+    height: 484px;
+    background-image: url("../img/iphone-screen-2-3@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .application-capabilities__item {
+    align-items: flex-start;
+    text-align: left;
+    width: auto;
+    padding-left: 320px;
+    margin-bottom: 40px;
+  }
+  .application-capabilities__item:last-child {
+    margin-bottom: 0;
+  }
+  .application-capabilities__item b {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  .application-capabilities__item p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .application-capabilities__item::before {
+    content: none;
+  }
+}
+@media (max-width: 759px) {
+  .page-information {
+    margin-bottom: 45px;
+  }
+  .page-information__wrapper {
+    margin-bottom: 0;
+  }
+  .page-information__slogan {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    max-width: 205px;
+  }
+  .page-information__slogan:nth-child(2) {
+    margin-bottom: 0;
+  }
+  .application-capabilities__wrapper {
+    width: 88%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 320px;
+  }
+  .application-capabilities__wrapper::before {
+    content: none;
+  }
+  .application-capabilities__wrapper::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    content: "";
+    width: 158px;
+    height: 277px;
+    background-image: url("../img/iphone-screen-2-3@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  .application-capabilities__item {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 35px;
+  }
+  .application-capabilities__item:last-child {
+    margin-bottom: 0;
+  }
+}
+.round-diagram {
+  margin-bottom: 70px;
+  background-color: #f2f2f2;
+}
+.round-diagram__wrapper {
+  width: 88%;
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 90px;
+  padding-left: 386px;
+  padding-bottom: 115px;
+}
+.round-diagram__wrapper::before {
+  position: absolute;
+  top: 0;
+  left: -35px;
+  content: "";
+  width: 299px;
+  height: 345px;
+  background-image: url("../img/round-diagram.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.round-diagram__wrapper b {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+.round-diagram__wrapper b br {
+  display: none;
+}
+.round-diagram__wrapper p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  margin-bottom: 30px;
+}
+.round-diagram__wrapper a {
+  font-size: 18px;
+  line-height: 30px;
+  color: #d22856;
+}
+.round-diagram__wrapper a:hover {
+  color: #283645;
+}
+.round-diagram__wrapper a:active {
+  text-decoration: none;
+  opacity: .3;
+}
+@media (max-width: 1199px) {
+  .round-diagram {
+    margin-bottom: 100px;
+    background-color: #fff;
+  }
+  .round-diagram__wrapper {
+    padding-top: 95px;
+    padding-left: 320px;
+    padding-bottom: 30px;
+  }
+  .round-diagram__wrapper::before {
+    top: 58px;
+    left: 0px;
+    width: 240px;
+    height: 277px;
+    background-size: contain;
+  }
+  .round-diagram__wrapper b {
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 15px;
+  }
+  .round-diagram__wrapper b br {
+    display: block;
+  }
+  .round-diagram__wrapper p {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  .round-diagram__wrapper a {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 759px) {
+  .round-diagram {
+    display: none;
+  }
+}
+.reviews {
+  background-color: #fff;
+  margin-bottom: 45px;
+}
+.reviews__wrapper {
+  width: 88%;
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.reviews__btn-prev {
+  font-size: 0;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid #bec2c7;
+  border-left: 2px solid #bec2c7;
+  transform: rotate(-45deg);
+  outline: none;
+  cursor: pointer;
+}
+.reviews__btn-prev:hover {
+  border-top: 2px solid #7e868f;
+  border-left: 2px solid #7e868f;
+}
+.reviews__btn-prev:active {
+  border-top: 2px solid #bec2c7;
+  border-left: 2px solid #bec2c7;
+  opacity: .1;
+}
+.reviews__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 115px;
+  max-width: 690px;
+}
+.reviews__item::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 88px;
+  height: 65px;
+  background-image: url("../img/quotes.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.reviews__text {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  margin-bottom: 40px;
+}
+.reviews__name {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+.reviews__info {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+}
+.reviews__btn-next {
+  font-size: 0;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid #bec2c7;
+  border-right: 2px solid #bec2c7;
+  transform: rotate(45deg);
+  outline: none;
+  cursor: pointer;
+}
+.reviews__btn-next:hover {
+  border-top: 2px solid #7e868f;
+  border-right: 2px solid #7e868f;
+}
+.reviews__btn-next:active {
+  border-top: 2px solid #bec2c7;
+  border-right: 2px solid #bec2c7;
+  opacity: .1;
+}
+.reviews__btns-container {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .reviews {
+    margin-bottom: 20px;
+  }
+  .reviews__wrapper {
+    flex-direction: column;
+  }
+  .reviews__btn-prev {
+    display: none;
+  }
+  .reviews__btn-next {
+    display: none;
+  }
+  .reviews__item {
+    padding-top: 0;
+    margin-bottom: 40px;
+    max-width: auto;
+  }
+  .reviews__item::before {
+    content: none;
+  }
+  .reviews__text {
+    margin-bottom: 45px;
+  }
+  .reviews__name {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+  .reviews__info {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .reviews__btns-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+  }
+  .reviews__btn {
+    font-size: 0;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    border: 3px solid #bec2c7;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .reviews__btn:hover {
+    border: 3px solid #7e868f;
+  }
+  .reviews__btn:active {
+    border: 3px solid #bec2c7;
+    opacity: .1;
+  }
+  .reviews__btn--active {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 3px solid #283645;
+    cursor: default;
+  }
+  .reviews__btn--active:hover {
+    border: 3px solid #283645;
+  }
+  .reviews__btn--active:active {
+    border: 3px solid #283645;
+    opacity: 1;
+  }
+}
+@media (max-width: 759px) {
+  .reviews {
+    margin-bottom: 42px;
+  }
+  .reviews__text {
+    order: 2;
+    font-size: 14px;
+    line-height: 30px;
+    margin-bottom: 0;
+  }
+  .reviews__name {
+    order: 1;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 25px;
+  }
+  .reviews__info {
+    display: none;
   }
 }
