@@ -102,6 +102,9 @@ body {
 .main-nav__item a:active::after {
   content: none;
 }
+.main-nav__item--active {
+  cursor: default;
+}
 .main-nav__item--active a:hover::after {
   content: none;
 }
@@ -212,13 +215,22 @@ body {
     margin-left: auto;
     border: none;
     background-color: transparent;
-    background-image: url("../img/menu-burger.svg");
+    background-image: url("../img/menu-burger.png");
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
   }
+  .main-nav__toggle:hover {
+    background-image: url("../img/menu-burger-hover.png");
+  }
+  .main-nav__toggle:active {
+    opacity: .3;
+  }
   .main-nav__toggle--close {
-    background-image: url("../img/menu-cross.svg");
+    background-image: url("../img/menu-cross.png");
+  }
+  .main-nav__toggle--close:hover {
+    background-image: url("../img/menu-cross-hover.png");
   }
   .main-nav__list {
     position: absolute;
