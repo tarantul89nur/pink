@@ -106,15 +106,21 @@ body {
     line-height: 18px;
     color: #fff;
     text-decoration: none;
+    transition: all .4s;
 
-    &:hover::after {
+    &::after {
       position: absolute;
       bottom: -10px;
       left: 0;
       content: "";
-      width: 100%;
+      width: 0;
       height: 2px;
       background-color: #fff;
+      transition: width .4s;
+    }
+
+    &:hover::after {
+      width: 100%;
     }
 
     &:active {
@@ -175,6 +181,7 @@ body {
   margin-bottom: 65px;
   border: 3px solid #fff;
   border-radius: 23px;
+  transition: all .4s;
 
   &:hover {
     color: #d22856;
@@ -257,6 +264,7 @@ body {
     background-image: url("../img/menu-burger.png");
     background-repeat: no-repeat;
     background-position: center;
+    transition: all .4s;
     cursor: pointer;
 
     &:hover {
@@ -675,6 +683,7 @@ body {
     font-size: 18px;
     line-height: 30px;
     color: #d22856;
+    transition: all .4s;
 
     &:hover {
       color: #283645;
@@ -752,10 +761,11 @@ body {
   height: 30px;
   background-color: transparent;
   border: none;
-  border-top: 2px solid #bec2c7;
-  border-left: 2px solid #bec2c7;
+  border-top: 2px solid #c2c6ca;
+  border-left: 2px solid #c2c6ca;
   transform: rotate(-45deg);
   outline: none;
+  transition: all .2s;
   cursor: pointer;
 
   &:hover {
@@ -764,8 +774,6 @@ body {
   }
 
   &:active {
-    border-top: 2px solid #bec2c7;
-    border-left: 2px solid #bec2c7;
     opacity: 0.1;
   }
 }
@@ -819,10 +827,11 @@ body {
   height: 30px;
   background-color: transparent;
   border: none;
-  border-top: 2px solid #bec2c7;
-  border-right: 2px solid #bec2c7;
+  border-top: 2px solid #c2c6ca;
+  border-right: 2px solid #c2c6ca;
   transform: rotate(45deg);
   outline: none;
+  transition: all .2s;
   cursor: pointer;
 
   &:hover {
@@ -831,8 +840,6 @@ body {
   }
 
   &:active {
-    border-top: 2px solid #bec2c7;
-    border-right: 2px solid #bec2c7;
     opacity: 0.1;
   }
 }
@@ -896,6 +903,7 @@ body {
     background-color: transparent;
     border: 3px solid #bec2c7;
     border-radius: 50%;
+    transition: all .2s;
     cursor: pointer;
 
     &:hover {
@@ -903,7 +911,6 @@ body {
     }
 
     &:active {
-      border: 3px solid #bec2c7;
       opacity: 0.1;
     }
 
@@ -919,7 +926,6 @@ body {
       }
 
       &:active {
-        border: 3px solid #283645;
         opacity: 1;
       }
     }
@@ -1164,6 +1170,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 60px;
+    height: 12px;
   }
 
   .price__btn {
@@ -1173,6 +1180,7 @@ body {
     background-color: transparent;
     border: 3px solid #bec2c7;
     border-radius: 50%;
+    transition: all .2s;
     cursor: pointer;
 
     &:hover {
@@ -1180,7 +1188,6 @@ body {
     }
 
     &:active {
-      border: 3px solid #bec2c7;
       opacity: 0.1;
     }
 
@@ -1253,6 +1260,7 @@ body {
     font-weight: 300;
     text-decoration: none;
     color: #d22856;
+    transition: all .3s;
 
     &:hover {
       text-decoration: underline;
@@ -1416,6 +1424,7 @@ body {
   background-color: transparent;
   border: 3px solid #eaeced;
   border-radius: 50%;
+  transition: all .4s;
 
   &:last-child {
     margin-right: 0;
@@ -1453,6 +1462,7 @@ body {
     background-image: url("../img/htmlacademy.png");
     background-repeat: no-repeat;
     background-position: center;
+    transition: all .3s;
   }
 
   &:hover::after {
@@ -1881,6 +1891,7 @@ body {
   background-color: #f2f2f2;
   border: 3px solid #d22856;
   border-radius: 50%;
+  transition: all .2s;
   cursor: pointer;
 
   &:active {
@@ -1915,6 +1926,7 @@ body {
   background-color: transparent;
   border: 3px solid;
   border-radius: 30px;
+  transition: all .4s;
   cursor: pointer;
 
   &--post {
@@ -2056,6 +2068,7 @@ body {
     height: 44px;
     fill: #b5b9be;
     margin-right: 0;
+    transition: all .4s;
     cursor: pointer;
 
     &:hover {
