@@ -12,7 +12,16 @@
 </head>
 
 <body>
-  <header class="page-header  page-header--margin-none  page-header--bg-inner">
+  <svg class="visually-hidden">
+    <symbol id="like" viewBox="0 0 507.168 507.168">
+      <path d="M368.804,38.31c-46.848,0-89.452,23.064-115.212,62.008C227.836,61.374,185.22,38.31,138.384,38.31
+  			C62.08,38.31,0,100.402,0,176.738c0,69.304,43.66,141.764,126.264,209.576c62.048,50.924,124.96,81.84,125.592,82.144
+  			c0.544,0.268,1.14,0.4,1.732,0.4s1.188-0.128,1.736-0.4c0.628-0.304,63.544-31.22,125.584-82.144
+  			c82.604-67.808,126.26-140.268,126.26-209.576C507.172,100.402,445.1,38.31,368.804,38.31z"/>
+    </symbol>
+  </svg>
+
+  <header class="page-header  page-header--page-photo-margin  page-header--bg-inner">
     <h1 class="visually-hidden">Pink - взгляните на жизнь иначе!</h1>
     <nav class="main-nav  main-nav--menu-open  main-nav--page-inner">
       <div class="main-nav__wrapper">
@@ -28,6 +37,106 @@
     </nav>
     <p class="page-title">Фотографии <br>пользователей</p>
   </header>
+
+  <main>
+    <section class="photos">
+      <p class="photos__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      <div class="panorama">
+        <p class="panorama__flag">Панорама дня</p>
+        <img class="panorama__img" src="img/panorama-desktop.jpg" alt="Панорама дня" width="1200" height="506">
+        <div class="panorama__description">
+          <p class="panorama__author">Анна <span>(5 минут назад)</span></p>
+          <p class="panorama__likes">
+            Нравится: 215
+            <svg width="14px" height="12px">
+              <use xlink:href="#like"></use>
+            </svg>
+          </p>
+          <p class="panorama__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+        </div>
+      </div>
+      <div class="photos__list">
+        <div class="photos__item">
+          <img class="photos__img" src="img/photo-1-desktop.jpg" alt="Вчера он на луну летал, сегодня в руки к нам попал." width="300" height="400">
+          <div class="photos__description">
+            <p class="photos__author">Левон <span>(5 часов назад)</span></p>
+            <p class="photos__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <div class="photos__like">
+              <p>Нравится: 356</p>
+              <svg width="14px" height="12px">
+                <use xlink:href="#like"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img class="photos__img" src="img/photo-2-desktop.jpg" alt="Соседи будут рады!" width="300" height="400">
+          <div class="photos__description">
+            <p class="photos__author">Антон <span>(12 часов назад)</span></p>
+            <p class="photos__text">Соседи будут рады!</p>
+            <div class="photos__like">
+              <p>Нравится: 666</p>
+              <svg width="14px" height="12px">
+                <use xlink:href="#like"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img class="photos__img" src="img/photo-3-desktop.jpg" alt="Здесь могла быть ваша цитата о высоком и вечном." width="300" height="400">
+          <div class="photos__description">
+            <p class="photos__author">Борис <span>(20 часов назад)</span></p>
+            <p class="photos__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <div class="photos__like">
+              <p>Нравится: 215</p>
+              <svg width="14px" height="12px">
+                <use xlink:href="#like"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img class="photos__img" src="img/photo-4-desktop.jpg" alt="Самая кубанская в мире!" width="300" height="400">
+          <div class="photos__description">
+            <p class="photos__author">Сергей <span>(25 часов назад)</span></p>
+            <p class="photos__text">Самая кубанская в мире!</p>
+            <div class="photos__like">
+              <p>Нравится: 4</p>
+              <svg width="14px" height="12px">
+                <use xlink:href="#like"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img class="photos__img" src="img/photo-5-desktop.jpg" alt="Где снег-то?" width="300" height="400">
+          <div class="photos__description">
+            <p class="photos__author">Максим <span>(40 часов назад)</span></p>
+            <p class="photos__text">Где снег-то?</p>
+            <div class="photos__like">
+              <p>Нравится: 150</p>
+              <svg width="14px" height="12px">
+                <use xlink:href="#like"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="photos__item">
+          <img class="photos__img" src="img/photo-6-desktop.jpg" alt="Всем GM и взаимные лайки!" width="300" height="400">
+          <div class="photos__description">
+            <p class="photos__author">Надежда <span>(45 часов назад)</span></p>
+            <p class="photos__text">Всем GM и взаимные лайки!</p>
+            <div class="photos__like">
+              <p>Нравится: 2560</p>
+              <svg width="14px" height="12px">
+                <use xlink:href="#like"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script src="js/script.js"></script>
 </body>
