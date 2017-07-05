@@ -1,5 +1,6 @@
 @mobile-widths: ~"(max-width: 759px)";
 @tablet-widths: ~"(max-width: 1199px)";
+@retina-width: ~"(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
 
 *,
 *::after,
@@ -53,7 +54,7 @@ body {
 
 .page-header {
   background-color: #1d2631;
-  background-image: url("../img/background-fullsize.jpg");
+  background-image: url("../img/background-2@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -365,7 +366,7 @@ body {
   .page-header {
     background-image: url("../img/iphone-hand-1.png"), url("../img/background-1@1x.jpg");
     background-repeat: no-repeat;
-    background-position: left 174px, center -30px;
+    background-position: left 174px, center;
     background-size: auto, cover;
     margin-bottom: 40px;
   }
