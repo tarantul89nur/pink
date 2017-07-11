@@ -8,7 +8,9 @@
   <meta name="format-detection" content="telephone=no">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet">
   <link href="css/normalize--min.css" rel="stylesheet">
+	<link href="css/swiper--min.css" rel="stylesheet" >
   <link href="css/style--min.css" rel="stylesheet">
+  <script src="js/jquery-3.2.1--min.js"></script>
 </head>
 
 <body>
@@ -105,106 +107,113 @@
     </div>
     <section class="reviews">
       <h2 class="visually-hidden">Отзывы</h2>
-      <div class="reviews__wrapper">
-        <button class="reviews__btn-prev" type="button">Предыдущий отзыв</button>
-        <div class="reviews__item">
-          <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          <b class="reviews__name">Николай Петров</b>
-          <p class="reviews__info">25 лет, водитель трамвая</p>
+      <img class="reviews__quotes-icon" src="img/quotes.png" width="79" height="63">
+      <div class="swiper-container">
+        <div class="swiper-wrapper  reviews__wrapper">
+          <div class="swiper-slide  reviews__item">
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <b class="reviews__name">Николай Петров</b>
+            <p class="reviews__info">25 лет, водитель трамвая</p>
+          </div>
+          <div class="swiper-slide  reviews__item">
+            <p class="reviews__text">«Отличное приложение»</p>
+            <b class="reviews__name">Виктор Анатольев</b>
+            <p class="reviews__info">20 лет, пилот</p>
+          </div>
+          <div class="swiper-slide  reviews__item">
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+            <b class="reviews__name">Анастасия Иванова</b>
+            <p class="reviews__info">40 лет, кассир</p>
+          </div>
         </div>
-        <button class="reviews__btn-next" type="button">Следующий отзыв</button>
-        <div class="reviews__btns-container">
-          <span class="reviews__btn  reviews__btn--active">Первый отзыв</span>
-          <span class="reviews__btn">Второй отзыв</span>
-          <span class="reviews__btn">Третий отзыв</span>
-        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </section>
     <section class="price">
       <h2 class="visually-hidden">Прайс-лист</h2>
-      <div class="price__table" id="priceTable">
-        <div class="price__column">
-          <div class="price__cell">Розовый фильтр</div>
-          <div class="price__cell">Смайлики</div>
-          <div class="price__cell">Комментарии</div>
-        </div>
-        <div class="price__column  js-absolute-left" id="priceSlide1">
-          <div class="price__header  price__header--left-radius">
-            База <br><span>1,99 USD</span>
+      <div class="second-swiper-container">
+        <div class="swiper-wrapper  price__table">
+          <div class="price__column  price__column--hidden">
+            <div class="price__cell">Розовый фильтр</div>
+            <div class="price__cell">Смайлики</div>
+            <div class="price__cell">Комментарии</div>
           </div>
-          <div class="price__cell  price__cell--yes">
-            <span>Розовый фильтр</span>
-            <svg width="30.375px" height="21.688px">
-            <use xlink:href="#yes"></use>
-            </svg>
-          </div>
-          <div class="price__cell  price__cell--no">
-            <span>Смайлики</span>
-            <svg width="26.752px" height="26.752px">
-            <use xlink:href="#no"></use>
-            </svg>
-          </div>
-          <div class="price__cell  price__cell--no">
-            <span>Комментарии</span>
-            <svg width="26.752px" height="26.752px">
-            <use xlink:href="#no"></use>
-            </svg>
-          </div>
-        </div>
-        <div class="price__column  js-visible-column" id="priceSlide2">
-          <div class="price__header  price__header--gray-border-left">
-            <div class="flag-hit">
-              Хит
+          <div class="swiper-slide  price__column">
+            <div class="price__header  price__header--left-radius">
+              База <br><span>1,99 USD</span>
             </div>
-            Стандарт <br><span>3,99 USD</span>
+            <div class="price__cell  price__cell--yes">
+              <span>Розовый фильтр</span>
+              <svg width="30.375px" height="21.688px">
+              <use xlink:href="#yes"></use>
+              </svg>
+            </div>
+            <div class="price__cell  price__cell--no">
+              <span>Смайлики</span>
+              <svg width="26.752px" height="26.752px">
+              <use xlink:href="#no"></use>
+              </svg>
+            </div>
+            <div class="price__cell  price__cell--no">
+              <span>Комментарии</span>
+              <svg width="26.752px" height="26.752px">
+              <use xlink:href="#no"></use>
+              </svg>
+            </div>
           </div>
-          <div class="price__cell  price__cell--yes">
-            <span>Розовый фильтр</span>
-            <svg width="30.375px" height="21.688px">
-            <use xlink:href="#yes"></use>
-            </svg>
+          <div class="swiper-slide  price__column">
+            <div class="price__header  price__header--gray-border-left">
+              <div class="flag-hit">
+                Хит
+              </div>
+              Стандарт <br><span>3,99 USD</span>
+            </div>
+            <div class="price__cell  price__cell--yes">
+              <span>Розовый фильтр</span>
+              <svg width="30.375px" height="21.688px">
+              <use xlink:href="#yes"></use>
+              </svg>
+            </div>
+            <div class="price__cell  price__cell--yes">
+              <span>Смайлики</span>
+              <svg width="30.375px" height="21.688px">
+              <use xlink:href="#yes"></use>
+              </svg>
+            </div>
+            <div class="price__cell  price__cell--no">
+              <span>Комментарии</span>
+              <svg width="26.752px" height="26.752px">
+              <use xlink:href="#no"></use>
+              </svg>
+            </div>
           </div>
-          <div class="price__cell  price__cell--yes">
-            <span>Смайлики</span>
-            <svg width="30.375px" height="21.688px">
-            <use xlink:href="#yes"></use>
-            </svg>
-          </div>
-          <div class="price__cell  price__cell--no">
-            <span>Комментарии</span>
-            <svg width="26.752px" height="26.752px">
-            <use xlink:href="#no"></use>
-            </svg>
+          <div class="swiper-slide  price__column">
+            <div class="price__header  price__header--gray-border-left  price__header--right-radius">
+              Анлим <br><span>9,99 USD</span>
+            </div>
+            <div class="price__cell  price__cell--yes">
+              <span>Розовый фильтр</span>
+              <svg width="30.375px" height="21.688px">
+              <use xlink:href="#yes"></use>
+              </svg>
+            </div>
+            <div class="price__cell  price__cell--yes">
+              <span>Смайлики</span>
+              <svg width="30.375px" height="21.688px">
+              <use xlink:href="#yes"></use>
+              </svg>
+            </div>
+            <div class="price__cell  price__cell--yes">
+              <span>Комментарии</span>
+              <svg width="30.375px" height="21.688px">
+              <use xlink:href="#yes"></use>
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="price__column  js-absolute-right" id="priceSlide3">
-          <div class="price__header  price__header--gray-border-left  price__header--right-radius">
-            Анлим <br><span>9,99 USD</span>
-          </div>
-          <div class="price__cell  price__cell--yes">
-            <span>Розовый фильтр</span>
-            <svg width="30.375px" height="21.688px">
-            <use xlink:href="#yes"></use>
-            </svg>
-          </div>
-          <div class="price__cell  price__cell--yes">
-            <span>Смайлики</span>
-            <svg width="30.375px" height="21.688px">
-            <use xlink:href="#yes"></use>
-            </svg>
-          </div>
-          <div class="price__cell  price__cell--yes">
-            <span>Комментарии</span>
-            <svg width="30.375px" height="21.688px">
-            <use xlink:href="#yes"></use>
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div class="price__btns-container">
-        <span class="price__btn" id="priceBtn1">База</span>
-        <span class="price__btn  price__btn--active" id="priceBtn2">Стандарт</span>
-        <span class="price__btn" id="priceBtn3">Анлим</span>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
     <section class="contacts">
@@ -255,7 +264,31 @@
     <a href="https://htmlacademy.ru" class="page-footer__developer" target="_blank">Разработано</a>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script--min.js"></script>
+  <script src="js/swiper--min.js"></script>
+  <script>
+		var swiper = new Swiper('.swiper-container', {
+			pagination: '.swiper-pagination',
+			paginationClickable: true,
+			loop: true,
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			spaceBetween: 30
+		});
+	</script>
+  <script>
+		if (window.matchMedia('(max-width: 759px)').matches) {
+      var swiper2 = new Swiper('.second-swiper-container', {
+				pagination: '.swiper-pagination',
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				paginationClickable: true,
+				noSwiping: false,
+				CSSWidthAndHeight: false,
+				spaceBetween: 0
+			});
+		}
+	</script>
 </body>
 
 </html>

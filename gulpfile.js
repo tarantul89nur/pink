@@ -36,7 +36,7 @@ gulp.task("copy-img", function() {
 });
 
 gulp.task("copy-js", function() {
-  return gulp.src("js/script.js", {base: 'js'})
+  return gulp.src("js/**/*.*", {base: 'js'})
     .pipe(gulp.dest('build/js'))
     .pipe(rename({suffix: '--min'}))
     .pipe(uglify())
