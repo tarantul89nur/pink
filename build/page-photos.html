@@ -1,267 +1,231 @@
 <!DOCTYPE html>
-<html lang="ru">
-
-<head>
-  <meta charset="utf-8">
-  <title>Pink - фотографии пользователей</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=latin,cyrillic" rel="stylesheet">
-  <link href="css/normalize--min.css" rel="stylesheet">
-  <link href="css/style--min.css" rel="stylesheet">
-</head>
-
-<body>
-  <svg class="visually-hidden">
-    <symbol id="like" viewBox="0 0 507.168 507.168">
-      <path d="M368.804,38.31c-46.848,0-89.452,23.064-115.212,62.008C227.836,61.374,185.22,38.31,138.384,38.31
-  			C62.08,38.31,0,100.402,0,176.738c0,69.304,43.66,141.764,126.264,209.576c62.048,50.924,124.96,81.84,125.592,82.144
-  			c0.544,0.268,1.14,0.4,1.732,0.4s1.188-0.128,1.736-0.4c0.628-0.304,63.544-31.22,125.584-82.144
-  			c82.604-67.808,126.26-140.268,126.26-209.576C507.172,100.402,445.1,38.31,368.804,38.31z"/>
-    </symbol>
-    <symbol id="contrast" viewBox="0 0 338 338">
-      <path d="M169,0h-15v0.673C67.814,8.29,0,80.868,0,169s67.814,160.71,154,168.327V338h15c93.187,0,169-75.813,169-169
-      	S262.187,0,169,0z M30,169C30,97.423,84.384,38.316,154,30.812v276.377C84.384,299.684,30,240.577,30,169z"/>
-    </symbol>
-    <symbol id="crop" viewBox="0 0 561 561">
-      <path d="M408,357h51V153c0-28.05-22.95-51-51-51H204v51h204V357z M153,408V0h-51v102H0v51h102v255c0,28.05,22.95,51,51,51h255v102
-  			h51V459h102v-51H153z"/>
-    </symbol>
-    <symbol id="fill" viewBox="0 0 16 16">
-      <path d="M7.1 1.7l-1.2 1.1-2.3-2.4c-0.6-0.5-1.6-0.5-2.2 0-0.2 0.3-0.4 0.7-0.4 1.1s0.2 0.8 0.4 1.1l2.4 2.4-3.8 3.7 6.4 6.4 7-7.1-6.3-6.3zM2.1 1.9c0-0.1-0.1-0.3-0.1-0.4s0.1-0.3 0.1-0.4c0.2-0.1 0.6-0.1 0.8 0l2.4 2.4-0.8 0.7-2.4-2.3zM2.1 8l3.8-3.8 1.2 1.2c0.1 0.1 0.2 0.1 0.4 0.1s0.3 0 0.4-0.1c0.1-0.2 0.1-0.5-0.1-0.7l-1.2-1.2 0.4-0.4 5 4.9h-9.9z"></path>
-      <path d="M13.5 9c0 0-1.5 4.7-1.5 5.5s0.7 1.5 1.5 1.5 1.5-0.7 1.5-1.5-1.5-5.5-1.5-5.5z"></path>
-    </symbol>
-    <symbol id="social-tw" viewBox="0 0 17.5 14.663">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151
-        c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86
-        c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0
-        c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881
-        c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461
-        c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
-    </symbol>
-    <symbol id="social-fb" viewBox="0 0 8.673 18.944">
-      <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115
-        H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786
-        C5.765,5.07,5.75,3.709,6.275,3.357z"/>
-    </symbol>
-    <symbol id="social-yt" viewBox="0 0 14.64 13.96">
-      <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932
-        c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
-    </symbol>
-  </svg>
-
-  <header class="page-header  page-header--page-photo-margin  page-header--bg-inner">
-    <h1 class="visually-hidden">Pink - взгляните на жизнь иначе!</h1>
-    <nav class="main-nav  main-nav--menu-open  main-nav--page-inner">
-      <div class="main-nav__wrapper">
-        <a class="main-nav__logo" href="index.html">Pink</a>
-        <button class="main-nav__toggle  main-nav__toggle--close" type="button">Открыть меню</button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="index.html">Главная</a></li>
-          <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
-          <li class="main-nav__item"><a href="#">Конкурс</a></li>
-          <li class="main-nav__item"><a href="#">HTML Academy</a></li>
-        </ul>
-      </div>
-    </nav>
-    <p class="page-title">Фотографии <br>пользователей</p>
-  </header>
-
-  <main>
-    <section class="photos">
-      <p class="photos__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-      <div class="panorama">
-        <p class="panorama__flag">Панорама дня</p>
-        <picture>
-          <source media="(max-width:759px)" srcset="img/panorama-mobile.jpg">
-          <source media="(max-width:1199px)" srcset="img/panorama-tablet.jpg">
-          <img class="panorama__img" src="img/panorama-desktop.jpg" alt="Панорама дня" width="1200" height="506">
-        </picture>
-        <div class="panorama__description">
-          <p class="panorama__author">Анна <span>(5 минут назад)</span></p>
-          <p class="panorama__likes">
-            Нравится: 215
-            <svg width="14px" height="12px">
-              <use xlink:href="#like"></use>
-            </svg>
-          </p>
-          <p class="panorama__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+<html>
+  <head>
+    <title>Pink - фотографии пользователей</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize--min.css" rel="stylesheet">
+    <link href="css/style--min.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg class="visually-hidden">
+      <symbol id="like" viewBox="0 0 507.168 507.168">
+        <path d="M368.804,38.31c-46.848,0-89.452,23.064-115.212,62.008C227.836,61.374,185.22,38.31,138.384,38.31C62.08,38.31,0,100.402,0,176.738c0,69.304,43.66,141.764,126.264,209.576c62.048,50.924,124.96,81.84,125.592,82.144c0.544,0.268,1.14,0.4,1.732,0.4s1.188-0.128,1.736-0.4c0.628-0.304,63.544-31.22,125.584-82.144c82.604-67.808,126.26-140.268,126.26-209.576C507.172,100.402,445.1,38.31,368.804,38.31z"></path>
+      </symbol>
+      <symbol id="contrast" viewBox="0 0 338 338">
+        <path d="M169,0h-15v0.673C67.814,8.29,0,80.868,0,169s67.814,160.71,154,168.327V338h15c93.187,0,169-75.813,169-169S262.187,0,169,0zM30,169C30,97.423,84.384,38.316,154,30.812v276.377C84.384,299.684,30,240.577,30,169z"></path>
+      </symbol>
+      <symbol id="crop" viewBox="0 0 561 561">
+        <path d="M408,357h51V153c0-28.05-22.95-51-51-51H204v51h204V357zM153,408V0h-51v102H0v51h102v255c0,28.05,22.95,51,51,51h255v102h51V459h102v-51H153z"></path>
+      </symbol>
+      <symbol id="fill" viewBox="0 0 16 16">
+        <path d="M7.1 1.7l-1.2 1.1-2.3-2.4c-0.6-0.5-1.6-0.5-2.2 0-0.2 0.3-0.4 0.7-0.4 1.1s0.2 0.8 0.4 1.1l2.4 2.4-3.8 3.7 6.4 6.4 7-7.1-6.3-6.3zM2.1 1.9c0-0.1-0.1-0.3-0.1-0.4s0.1-0.3 0.1-0.4c0.2-0.1 0.6-0.1 0.8 0l2.4 2.4-0.8 0.7-2.4-2.3zM2.1 8l3.8-3.8 1.2 1.2c0.1 0.1 0.2 0.1 0.4 0.1s0.3 0 0.4-0.1c0.1-0.2 0.1-0.5-0.1-0.7l-1.2-1.2 0.4-0.4 5 4.9h-9.9z"></path>
+        <path d="M13.5 9c0 0-1.5 4.7-1.5 5.5s0.7 1.5 1.5 1.5 1.5-0.7 1.5-1.5-1.5-5.5-1.5-5.5z"></path>
+      </symbol>
+    </svg>
+    <svg class="social-svg visually-hidden">
+      <symbol id="social-tw" viewBox="0 0 17.5 14.663">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"></path>
+      </symbol>
+      <symbol id="social-fb" viewBox="0 0 8.673 18.944">
+        <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786C5.765,5.07,5.75,3.709,6.275,3.357z"></path>
+      </symbol>
+      <symbol id="social-yt" viewBox="0 0 14.64 13.96">
+        <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"></path>
+      </symbol>
+    </svg>
+    <header class="page-header page-header--page-photo-margin page-header--bg-inner">
+      <h1 class="visually-hidden">Pink - взгляните на жизнь иначе!</h1>
+      <nav class="main-nav main-nav--menu-open main-nav--page-inner">
+        <div class="main-nav__wrapper"><a href="index.html" class="main-nav__logo">Pink</a>
+          <button type="button" class="main-nav__toggle main-nav__toggle--close">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="index.html">Главная</a></li>
+            <li class="main-nav__item main-nav__item--active"><a>Фотографии</a></li>
+            <li class="main-nav__item"> <a href="#">Конкурс</a></li>
+            <li class="main-nav__item"> <a href="#">HTML Academy</a></li>
+          </ul>
         </div>
-      </div>
-      <div class="photos__list">
-        <div class="photos__item">
+      </nav>
+      <p class="page-title">Фотографии<br>пользователей</p>
+    </header>
+    <main> 
+      <section class="photos">
+        <p class="photos__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <div class="panorama">
+          <p class="panorama__flag">Панорама дня</p>
           <picture>
-            <source media="(max-width:759px)" srcset="img/photo-1-mobile.jpg">
-            <source media="(max-width:1199px)" srcset="img/photo-1-tablet.jpg">
-            <img class="photos__img" src="img/photo-1-desktop.jpg" alt="Вчера он на луну летал, сегодня в руки к нам попал." width="300" height="400">
+            <source media="(max-width:759px)" srcset="img/panorama-mobile.jpg">
+            <source media="(max-width:1199px)" srcset="img/panorama-tablet.jpg"><img src="img/panorama-desktop.jpg" alt="Панорама дня" width="1200" height="506" class="panorama__img">
           </picture>
-          <div class="photos__description">
-            <p class="photos__author">Левон <span>(5 часов назад)</span></p>
-            <p class="photos__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-            <div class="photos__like">
-              <p>Нравится: 356</p>
+          <div class="panorama__description">
+            <p class="panorama__author">Анна <span>(5 минут назад)</span></p>
+            <p class="panorama__likes">Нравится: 215
               <svg width="14px" height="12px">
                 <use xlink:href="#like"></use>
               </svg>
-            </div>
+            </p>
+            <p class="panorama__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
           </div>
         </div>
-        <div class="photos__item">
-          <picture>
-            <source media="(max-width:759px)" srcset="img/photo-2-mobile.jpg">
-            <source media="(max-width:1199px)" srcset="img/photo-2-tablet.jpg">
-            <img class="photos__img" src="img/photo-2-desktop.jpg" alt="Соседи будут рады!" width="300" height="400">
-          </picture>
-          <div class="photos__description">
-            <p class="photos__author">Антон <span>(12 часов назад)</span></p>
-            <p class="photos__text">Соседи будут рады!</p>
-            <div class="photos__like">
-              <p>Нравится: 666</p>
-              <svg width="14px" height="12px">
-                <use xlink:href="#like"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="photos__item">
-          <picture>
-            <source media="(max-width:759px)" srcset="img/photo-3-mobile.jpg">
-            <source media="(max-width:1199px)" srcset="img/photo-3-tablet.jpg">
-            <img class="photos__img" src="img/photo-3-desktop.jpg" alt="Здесь могла быть ваша цитата о высоком и вечном." width="300" height="400">
-          </picture>
-          <div class="photos__description">
-            <p class="photos__author">Борис <span>(20 часов назад)</span></p>
-            <p class="photos__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-            <div class="photos__like">
-              <p>Нравится: 215</p>
-              <svg width="14px" height="12px">
-                <use xlink:href="#like"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="photos__item">
-          <picture>
-            <source media="(max-width:759px)" srcset="img/photo-4-mobile.jpg">
-            <source media="(max-width:1199px)" srcset="img/photo-4-tablet.jpg">
-            <img class="photos__img" src="img/photo-4-desktop.jpg" alt="Самая кубанская в мире!" width="300" height="400">
-          </picture>
-          <div class="photos__description">
-            <p class="photos__author">Сергей <span>(25 часов назад)</span></p>
-            <p class="photos__text">Самая кубанская в мире!</p>
-            <div class="photos__like">
-              <p>Нравится: 4</p>
-              <svg width="14px" height="12px">
-                <use xlink:href="#like"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="photos__item">
-          <picture>
-            <source media="(max-width:759px)" srcset="img/photo-5-mobile.jpg">
-            <source media="(max-width:1199px)" srcset="img/photo-5-tablet.jpg">
-            <img class="photos__img" src="img/photo-5-desktop.jpg" alt="Где снег-то?" width="300" height="400">
-          </picture>
-          <div class="photos__description">
-            <p class="photos__author">Максим <span>(40 часов назад)</span></p>
-            <p class="photos__text">Где снег-то?</p>
-            <div class="photos__like">
-              <p>Нравится: 150</p>
-              <svg width="14px" height="12px">
-                <use xlink:href="#like"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="photos__item">
-          <picture>
-            <source media="(max-width:759px)" srcset="img/photo-6-mobile.jpg">
-            <source media="(max-width:1199px)" srcset="img/photo-6-tablet.jpg">
-            <img class="photos__img" src="img/photo-6-desktop.jpg" alt="Всем GM и взаимные лайки!" width="300" height="400">
-          </picture>
-          <div class="photos__description">
-            <p class="photos__author">Надежда <span>(45 часов назад)</span></p>
-            <p class="photos__text">Всем GM и взаимные лайки!</p>
-            <div class="photos__like">
-              <p>Нравится: 2560</p>
-              <svg width="14px" height="12px">
-                <use xlink:href="#like"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="upload">
-      <p class="upload__slogan">Затмите их всех! <br>Выкладывайте все, что накопилось в телефоне!</p>
-      <div class="upload__wrapper">
-        <picture>
-          <source media="(max-width:759px)" srcset="img/photo-7-mobile.jpg">
-          <source media="(max-width:1199px)" srcset="img/photo-7-tablet.jpg">
-          <img class="upload__img" src="img/photo-7-desktop.jpg" alt="Фото для загрузки" width="300" height="400">
-        </picture>
-        <div class="upload__control">
-          <div class="upload__settings">
-            <div class="upload__item">
-              <svg class="upload__svg  upload__svg--active" id="uploadCropSvg" width="44px" height="44px">
-                <use xlink:href="#crop"></use>
-              </svg>
-              <div class="upload__range" id="uploadCropRange">
-                <div class="upload__scale"></div>
-                <div class="upload__toggle  upload__toggle--crop"></div>
-              </div>
-            </div>
-            <div class="upload__item">
-              <svg class="upload__svg" id="uploadFillSvg" width="44px" height="44px">
-                <use xlink:href="#fill"></use>
-              </svg>
-              <div class="upload__range  upload__range--js-hidden" id="uploadFillRange">
-                <div class="upload__scale"></div>
-                <div class="upload__toggle  upload__toggle--fill"></div>
-              </div>
-            </div>
-            <div class="upload__item">
-              <svg class="upload__svg" id="uploadContrastSvg" width="44px" height="44px">
-                <use xlink:href="#contrast"></use>
-              </svg>
-              <div class="upload__range  upload__range--js-hidden" id="uploadContrastRange">
-                <div class="upload__scale"></div>
-                <div class="upload__toggle  upload__toggle--contrast"></div>
+        <div class="photos__list">
+          <div class="photos__item">
+            <picture>
+              <source media="(max-width:759px)" srcset="img/photo-1-mobile.jpg">
+              <source media="(max-width:1199px)" srcset="img/photo-1-tablet.jpg"><img src="img/photo-1-desktop.jpg" alt="Вчера он на луну летал, сегодня в руки к нам попал." width="300" height="400" class="photos__img">
+            </picture>
+            <div class="photos__description">
+              <p class="photos__author">Левон <span>(5 часов назад)</span></p>
+              <p class="photos__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <div class="photos__like">
+                <p>Нравится: 356</p>
+                <svg width="14px" height="12px">
+                  <use xlink:href="#like"></use>
+                </svg>
               </div>
             </div>
           </div>
-          <div class="upload__btns">
-            <button class="upload__btn  upload__btn--post" type="button">Запостить</button>
-            <button class="upload__btn  upload__btn--cansel" type="button">Отмена</button>
+          <div class="photos__item">
+            <picture>
+              <source media="(max-width:759px)" srcset="img/photo-2-mobile.jpg">
+              <source media="(max-width:1199px)" srcset="img/photo-2-tablet.jpg"><img src="img/photo-2-desktop.jpg" alt="Соседи будут рады!" width="300" height="400" class="photos__img">
+            </picture>
+            <div class="photos__description">
+              <p class="photos__author">Антон <span>(12 часов назад)</span></p>
+              <p class="photos__text">Соседи будут рады!</p>
+              <div class="photos__like">
+                <p>Нравится: 666</p>
+                <svg width="14px" height="12px">
+                  <use xlink:href="#like"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="photos__item">
+            <picture>
+              <source media="(max-width:759px)" srcset="img/photo-3-mobile.jpg">
+              <source media="(max-width:1199px)" srcset="img/photo-3-tablet.jpg"><img src="img/photo-3-desktop.jpg" alt="Здесь могла быть ваша цитата о высоком и вечном." width="300" height="400" class="photos__img">
+            </picture>
+            <div class="photos__description">
+              <p class="photos__author">Борис  <span>(20 часов назад)</span></p>
+              <p class="photos__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <div class="photos__like">
+                <p>Нравится: 215</p>
+                <svg width="14px" height="12px">
+                  <use xlink:href="#like"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="photos__item">
+            <picture>
+              <source media="(max-width:759px)" srcset="img/photo-4-mobile.jpg">
+              <source media="(max-width:1199px)" srcset="img/photo-4-tablet.jpg"><img src="img/photo-4-desktop.jpg" alt="Самая кубанская в мире!" width="300" height="400" class="photos__img">
+            </picture>
+            <div class="photos__description">
+              <p class="photos__author">Сергей   <span>(25 часов назад)</span></p>
+              <p class="photos__text">Самая кубанская в мире!</p>
+              <div class="photos__like">
+                <p>Нравится: 4</p>
+                <svg width="14px" height="12px">
+                  <use xlink:href="#like"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="photos__item">
+            <picture>
+              <source media="(max-width:759px)" srcset="img/photo-5-mobile.jpg">
+              <source media="(max-width:1199px)" srcset="img/photo-5-tablet.jpg"><img src="img/photo-5-desktop.jpg" alt="Где снег-то?" width="300" height="400" class="photos__img">
+            </picture>
+            <div class="photos__description">
+              <p class="photos__author">Максим    <span>(40 часов назад)</span></p>
+              <p class="photos__text">Где снег-то?</p>
+              <div class="photos__like">
+                <p>Нравится: 150</p>
+                <svg width="14px" height="12px">
+                  <use xlink:href="#like"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="photos__item">
+            <picture>
+              <source media="(max-width:759px)" srcset="img/photo-6-mobile.jpg">
+              <source media="(max-width:1199px)" srcset="img/photo-6-tablet.jpg"><img src="img/photo-6-desktop.jpg" alt="Всем GM и взаимные лайки!" width="300" height="400" class="photos__img">
+            </picture>
+            <div class="photos__description">
+              <p class="photos__author">Надежда     <span>(45 часов назад)</span></p>
+              <p class="photos__text">Всем GM и взаимные лайки!</p>
+              <div class="photos__like">
+                <p>Нравится: 2560</p>
+                <svg width="14px" height="12px">
+                  <use xlink:href="#like"></use>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="page-footer  page-footer--inner-page">
-    <a class="page-footer__logo" href="index.html">Pink</a>
-    <div class="social">
-      <a href="#" class="social__btn" target="_blank">
-        <svg width="17.5px" height="14.663px">
-        <use xlink:href="#social-tw"></use>
-        </svg>
-      </a>
-      <a href="#" class="social__btn" target="_blank">
-        <svg width="8.673px" height="18.944px">
-        <use xlink:href="#social-fb"></use>
-        </svg>
-      </a>
-      <a href="#" class="social__btn" target="_blank">
-        <svg width="14.64px" height="13.96px">
-        <use xlink:href="#social-yt"></use>
-        </svg>
-      </a>
-    </div>
-    <a href="https://htmlacademy.ru" class="page-footer__developer" target="_blank">Разработано</a>
-  </footer>
-
-  <script src="js/script--min.js"></script>
-</body>
+      </section>
+      <section class="upload">
+        <p class="upload__slogan">Затмите их всех! <br>Выкладывайте все, что накопилось в телефоне!</p>
+        <div class="upload__wrapper">
+          <picture>
+            <source media="(max-width:759px)" srcset="img/photo-7-mobile.jpg">
+            <source media="(max-width:1199px)" srcset="img/photo-7-tablet.jpg"><img src="img/photo-7-desktop.jpg" alt="Фото для загрузки" width="300" height="400" class="photos__img">
+          </picture>
+          <div class="upload__control">
+            <div class="upload__settings">
+              <div class="upload__item">
+                <svg id="uploadCropSvg" width="44px" height="44px" class="upload__svg upload__svg--active">
+                  <use xlink:href="#crop"></use>
+                </svg>
+                <div id="uploadCropRange" class="upload__range">
+                  <div class="upload__scale"></div>
+                  <div class="upload__toggle upload__toggle--crop"></div>
+                </div>
+              </div>
+              <div class="upload__item">
+                <svg id="uploadFillSvg" width="44px" height="44px" class="upload__svg">
+                  <use xlink:href="#fill"></use>
+                </svg>
+                <div id="uploadFillRange" class="upload__range upload__range--js-hidden">
+                  <div class="upload__scale"></div>
+                  <div class="upload__toggle upload__toggle--fill"></div>
+                </div>
+              </div>
+              <div class="upload__item">
+                <svg id="uploadContrastSvg" width="44px" height="44px" class="upload__svg">
+                  <use xlink:href="#contrast"></use>
+                </svg>
+                <div id="uploadContrastRange" class="upload__range upload__range--js-hidden">
+                  <div class="upload__scale"></div>
+                  <div class="upload__toggle upload__toggle--contrast"></div>
+                </div>
+              </div>
+            </div>
+            <div class="upload__btns">
+              <button type="button" class="upload__btn upload__btn--post">Запостить</button>
+              <button type="button" class="upload__btn upload__btn--cansel">Отмена</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer page-footer--inner-page"><a class="page-footer__logo">Pink</a>
+      <div class="social"><a href="#" target="_blank" class="social__btn">
+          <svg width="17.5px" height="14.663px">
+            <use xlink:href="#social-tw"></use>
+          </svg></a><a href="#" target="_blank" class="social__btn">
+          <svg width="8.673px" height="18.944px">
+            <use xlink:href="#social-fb"></use>
+          </svg></a><a href="#" target="_blank" class="social__btn">
+          <svg width="14.64px" height="13.96px">
+            <use xlink:href="#social-yt"></use>
+          </svg></a></div><a href="https://htmlacademy.ru" target="_blank" class="page-footer__developer">Разработано</a>
+    </footer>
+    <script src="js/script--min.js"></script>
+  </body>
 </html>

@@ -1,0 +1,95 @@
+section.photos
+  p.photos__slogan Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+  .panorama
+    p.panorama__flag Панорама дня
+    picture
+      source(media="(max-width:759px)", srcset="img/panorama-mobile.jpg")
+      source(media="(max-width:1199px)", srcset="img/panorama-tablet.jpg")
+      img.panorama__img(src="img/panorama-desktop.jpg", alt="Панорама дня", width="1200", height="506")
+    .panorama__description
+      p.panorama__author Анна 
+        span (5 минут назад)
+      p.panorama__likes Нравится: 215
+        svg(width="14px", height="12px")
+          use(xlink:href="#like")
+      p.panorama__text Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!
+  .photos__list
+    .photos__item
+      picture
+        source(media="(max-width:759px)", srcset="img/photo-1-mobile.jpg")
+        source(media="(max-width:1199px)", srcset="img/photo-1-tablet.jpg")
+        img.photos__img(src="img/photo-1-desktop.jpg", alt="Вчера он на луну летал, сегодня в руки к нам попал.", width="300", height="400")
+      .photos__description
+        p.photos__author Левон 
+          span (5 часов назад)
+        p.photos__text Вчера он на луну летал, сегодня в руки к нам попал.
+        .photos__like
+          p Нравится: 356
+          svg(width="14px", height="12px")
+            use(xlink:href="#like")
+    .photos__item
+      picture
+        source(media="(max-width:759px)", srcset="img/photo-2-mobile.jpg")
+        source(media="(max-width:1199px)", srcset="img/photo-2-tablet.jpg")
+        img.photos__img(src="img/photo-2-desktop.jpg", alt="Соседи будут рады!", width="300", height="400")
+      .photos__description
+        p.photos__author Антон 
+          span (12 часов назад)
+        p.photos__text Соседи будут рады!
+        .photos__like
+          p Нравится: 666
+          svg(width="14px", height="12px")
+            use(xlink:href="#like")
+    .photos__item
+      picture
+        source(media="(max-width:759px)", srcset="img/photo-3-mobile.jpg")
+        source(media="(max-width:1199px)", srcset="img/photo-3-tablet.jpg")
+        img.photos__img(src="img/photo-3-desktop.jpg", alt="Здесь могла быть ваша цитата о высоком и вечном.", width="300", height="400")
+      .photos__description
+        p.photos__author Борис  
+          span (20 часов назад)
+        p.photos__text Здесь могла быть ваша цитата о высоком и вечном.
+        .photos__like
+          p Нравится: 215
+          svg(width="14px", height="12px")
+            use(xlink:href="#like")
+    .photos__item
+      picture
+        source(media="(max-width:759px)", srcset="img/photo-4-mobile.jpg")
+        source(media="(max-width:1199px)", srcset="img/photo-4-tablet.jpg")
+        img.photos__img(src="img/photo-4-desktop.jpg", alt="Самая кубанская в мире!", width="300", height="400")
+      .photos__description
+        p.photos__author Сергей   
+          span (25 часов назад)
+        p.photos__text Самая кубанская в мире!
+        .photos__like
+          p Нравится: 4
+          svg(width="14px", height="12px")
+            use(xlink:href="#like")
+    .photos__item
+      picture
+        source(media="(max-width:759px)", srcset="img/photo-5-mobile.jpg")
+        source(media="(max-width:1199px)", srcset="img/photo-5-tablet.jpg")
+        img.photos__img(src="img/photo-5-desktop.jpg", alt="Где снег-то?", width="300", height="400")
+      .photos__description
+        p.photos__author Максим    
+          span (40 часов назад)
+        p.photos__text Где снег-то?
+        .photos__like
+          p Нравится: 150
+          svg(width="14px", height="12px")
+            use(xlink:href="#like")
+    .photos__item
+      picture
+        source(media="(max-width:759px)", srcset="img/photo-6-mobile.jpg")
+        source(media="(max-width:1199px)", srcset="img/photo-6-tablet.jpg")
+        img.photos__img(src="img/photo-6-desktop.jpg", alt="Всем GM и взаимные лайки!", width="300", height="400")
+      .photos__description
+        p.photos__author Надежда     
+          span (45 часов назад)
+        p.photos__text Всем GM и взаимные лайки!
+        .photos__like
+          p Нравится: 2560
+          svg(width="14px", height="12px")
+            use(xlink:href="#like")
+            

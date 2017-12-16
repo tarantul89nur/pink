@@ -1,0 +1,32 @@
+section.upload
+  p.upload__slogan Затмите их всех! 
+    br
+    | Выкладывайте все, что накопилось в телефоне!
+  .upload__wrapper
+    picture
+      source(media="(max-width:759px)", srcset="img/photo-7-mobile.jpg")
+      source(media="(max-width:1199px)", srcset="img/photo-7-tablet.jpg")
+      img.photos__img(src="img/photo-7-desktop.jpg", alt="Фото для загрузки", width="300", height="400")
+    .upload__control
+      .upload__settings
+        .upload__item
+          svg.upload__svg.upload__svg--active#uploadCropSvg(width="44px", height="44px")
+            use(xlink:href="#crop")
+          .upload__range#uploadCropRange
+            .upload__scale
+            .upload__toggle.upload__toggle--crop
+        .upload__item
+          svg.upload__svg#uploadFillSvg(width="44px", height="44px")
+            use(xlink:href="#fill")
+          .upload__range.upload__range--js-hidden#uploadFillRange
+            .upload__scale
+            .upload__toggle.upload__toggle--fill
+        .upload__item
+          svg.upload__svg#uploadContrastSvg(width="44px", height="44px")
+            use(xlink:href="#contrast")
+          .upload__range.upload__range--js-hidden#uploadContrastRange
+            .upload__scale
+            .upload__toggle.upload__toggle--contrast
+      .upload__btns
+        button.upload__btn.upload__btn--post(type="button") Запостить
+        button.upload__btn.upload__btn--cansel(type="button") Отмена

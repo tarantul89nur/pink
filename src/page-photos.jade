@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Pink - фотографии пользователей
+    include jade/partials/head
+    
+  body
+    include jade/pages/page-photos/svg
+    include jade/partials/social-svg
+    
+    header.page-header.page-header--page-photo-margin.page-header--bg-inner
+      include jade/pages/page-photos/header
+      
+    main 
+      include jade/pages/page-photos/photos
+      include jade/pages/page-photos/upload
+      
+    footer.page-footer.page-footer--inner-page
+      include jade/partials/footer
+      
+    script(src="js/script--min.js")
