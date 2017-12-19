@@ -1,0 +1,108 @@
+.round-diagram {
+  margin-bottom: 70px;
+  background-color: #f2f2f2;
+}
+
+.round-diagram__wrapper {
+  .container-fluid();
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 90px;
+  padding-left: 386px;
+  padding-bottom: 115px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -35px;
+    content: "";
+    width: 299px;
+    height: 345px;
+    background-image: url("../img/round-diagram.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  b {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+
+    br {
+      display: none;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    margin-bottom: 30px;
+  }
+
+  a {
+    font-size: 18px;
+    line-height: 30px;
+    color: #d22856;
+    transition: all .4s;
+
+    &:hover {
+      color: #283645;
+    }
+
+    &:active {
+      text-decoration: none;
+      opacity: 0.3;
+    }
+  }
+}
+@media @tablet-widths {
+  .round-diagram {
+    margin-bottom: 100px;
+    background-color: #fff;
+  }
+
+  .round-diagram__wrapper {
+    padding-top: 95px;
+    padding-left: 320px;
+    padding-bottom: 30px;
+
+    &::before {
+      top: 58px;
+      left: 0;
+      width: 240px;
+      height: 277px;
+      background-size: contain;
+    }
+
+    b {
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 15px;
+
+      br {
+        display: block;
+      }
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
+@media @mobile-widths {
+  .round-diagram {
+    display: none;
+  }
+}

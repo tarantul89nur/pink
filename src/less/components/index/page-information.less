@@ -1,0 +1,211 @@
+.page-information {
+  background-color: #fff;
+}
+
+.page-information__wrapper {
+  .container-fluid();
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.page-information__slogan {
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 300;
+  text-align: center;
+  color: #283645;
+
+  &:nth-child(2) {
+    max-width: 500px;
+  }
+}
+
+.application-capabilities {
+  padding-top: 360px;
+  background-image: url("../img/page-information-bg.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-bottom: 70px;
+}
+
+.application-capabilities__wrapper {
+  .container-fluid();
+  display: flex;
+  justify-content: space-between;
+}
+
+.application-capabilities__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 240px;
+
+  b {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 255px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 240px;
+    height: 301px;
+  }
+
+  &:nth-child(1)::before {
+    background-image: url("../img/iphone-screen-3-1@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../img/iphone-screen-3-2@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../img/iphone-screen-3-3@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+@media @tablet-widths {
+  .page-information__wrapper {
+    margin-bottom: 40px;
+  }
+
+  .page-information__slogan {
+    font-size: 40px;
+    line-height: 45px;
+
+    &:nth-child(2) {
+      max-width: 335px;
+    }
+  }
+
+  .application-capabilities {
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+
+  .application-capabilities__wrapper {
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 50px;
+    margin-left: auto;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 268px;
+      height: 484px;
+      background-image: url("../img/iphone-screen-2-3@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .application-capabilities__item {
+    align-items: flex-start;
+    text-align: left;
+    width: auto;
+    padding-left: 320px;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    b {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+}
+@media @mobile-widths {
+  .page-information {
+    margin-bottom: 45px;
+  }
+
+  .page-information__wrapper {
+    margin-bottom: 0;
+  }
+
+  .page-information__slogan {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 30px;
+    max-width: 205px;
+
+    &:nth-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  .application-capabilities__wrapper {
+    .container-fluid();
+    padding-top: 50px;
+    padding-bottom: 320px;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%);
+      content: "";
+      width: 158px;
+      height: 277px;
+      background-image: url("../img/iphone-screen-2-3@1x.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .application-capabilities__item {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
