@@ -48,7 +48,7 @@ body {
   margin-bottom: 70px;
 }
 
-.page-header--page-photo-margin {
+.page-header--page-inner-margin {
   margin-bottom: 100px;
 }
 
@@ -1209,7 +1209,7 @@ body {
     margin-bottom: 50px;
   }
 
-  .page-header--page-photo-margin {
+  .page-header--page-inner-margin {
     margin-bottom: 100px;
   }
 
@@ -1340,6 +1340,10 @@ body {
   .page-title {
     padding-top: 75px;
     padding-bottom: 140px;
+  }
+
+  .page-title--max-width {
+    max-width: 520px;
   }
 
   .page-information__wrapper {
@@ -1672,7 +1676,7 @@ body {
     background-size: cover;
   }
 
-  .page-header--page-photo-margin {
+  .page-header--page-inner-margin {
     margin-bottom: 50px;
   }
 
@@ -1732,9 +1736,13 @@ body {
 
   .page-title {
     font-size: 24px;
-    line-height: 24px;
+    line-height: 26px;
     padding-top: 30px;
     padding-bottom: 80px;
+  }
+
+  .page-title--max-width {
+    max-width: 250px;
   }
 
   .page-information {

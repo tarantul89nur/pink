@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pink - конкурс</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize--min.css" rel="stylesheet">
+    <link href="css/style--min.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg class="social-svg visually-hidden">
+      <symbol id="social-tw" viewBox="0 0 17.5 14.663">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"></path>
+      </symbol>
+      <symbol id="social-fb" viewBox="0 0 8.673 18.944">
+        <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786C5.765,5.07,5.75,3.709,6.275,3.357z"></path>
+      </symbol>
+      <symbol id="social-yt" viewBox="0 0 14.64 13.96">
+        <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"></path>
+      </symbol>
+    </svg>
+    <header class="page-header page-header--page-inner-margin page-header--bg-inner">
+      <h1 class="visually-hidden">Pink - взгляните на жизнь иначе!</h1>
+      <nav class="main-nav main-nav--menu-open main-nav--page-inner">
+        <div class="main-nav__wrapper"><a href="index.html" class="main-nav__logo">Pink</a>
+          <button type="button" class="main-nav__toggle main-nav__toggle--close">Открыть меню</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="index.html">Главная</a></li>
+            <li class="main-nav__item"><a href="page-photos.html">Фотографии</a></li>
+            <li class="main-nav__item main-nav__item--active"><a>Конкурс</a></li>
+            <li class="main-nav__item"> <a href="#">HTML Academy</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p class="page-title page-title--max-width">Конкурс на самое безбашенное<br>путешествие с Пинк</p>
+    </header>
+    <main> 
+      <form action="#" method="post" class="competition-form">
+        <h2 class="visually-hidden">Форма для заполнения</h2>
+        <p class="competition-form__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:</p>
+        <div class="competition-form__personal-data">
+          <label for="surname" class="competition-form__label-text">Фамилия:</label>
+          <input id="surname" type="text" placeholder="Укажите фамилию" class="competition-form__input">
+          <label for="name" class="competition-form__label-text">Имя:</label>
+          <input id="name" type="text" placeholder="Укажите имя" class="competition-form__input">
+          <label for="midname" class="competition-form__label-text">Отчество:</label>
+          <input id="midname" type="text" placeholder="Укажите отчество" class="competition-form__input">
+        </div>
+        <fieldset class="competition-form__apps">
+          <legend class="competition-form__legend">С каким приложением путешествовали?</legend>
+          <input id="pinkIos" type="radio" name="pinkApp" value="pinkIos" checked class="competition-form__input-radio">
+          <label for="pinkIos" class="competition-form__label-check">Pink для iOS</label>
+          <input id="pinkAndroid" type="radio" name="pinkApp" value="pinkAndroid" class="competition-form__input-radio">
+          <label for="pinkAndroid" class="competition-form__label-check">Pink на Android</label>
+          <input id="pinkWP" type="radio" name="pinkApp" value="pinkWP" class="competition-form__input-radio">
+          <label for="pinkWP" class="competition-form__label-check">Windows Phone</label>
+        </fieldset>
+        <fieldset class="competition-form__contacts">
+          <legend class="competition-form__legend">Контактная информация</legend>
+          <input id="tel" type="tel" placeholder="+7 ХХХ ХХХ-ХХ-ХХ" class="competition-form__input--padding-right">
+          <label for="tel" class="competition-form__label-check">Номер телефона</label>
+          <input id="mail" type="mail" placeholder="Введите почту" class="competition-form__input--padding-right">
+          <label for="mail" class="competition-form__label-check">Адрес почты</label>
+        </fieldset>
+        <fieldset class="competition-form__achievements">
+          <legend class="competition-form__legend">Ваши безбашенные достижения в путешествии</legend>
+          <input id="selfieWithShark" type="checkbox" name="selfieWithShark" checked class="competition-form__input-checkbox">
+          <label for="selfieWithShark" class="competition-form__label-check">Сделал селфи с акулой</label>
+          <input id="burnt" type="checkbox" name="burnt" checked class="competition-form__input-checkbox">
+          <label for="burnt" class="competition-form__label-check">Обгорел на пляже</label>
+          <input id="sawChack" type="checkbox" name="sawChack" class="competition-form__input-checkbox">
+          <label for="sawChack" class="competition-form__label-check">Видел Чака Норриса</label>
+          <input id="souvenirs" type="checkbox" name="souvenirs" class="competition-form__input-checkbox">
+          <label for="souvenirs" class="competition-form__label-check">Накупил сувениров</label>
+          <input id="tower" type="checkbox" name="tower" checked class="competition-form__input-checkbox">
+          <label for="tower" class="competition-form__label-check">Удержал башню</label>
+          <input id="smash" type="checkbox" name="smash" class="competition-form__input-checkbox">
+          <label for="smash" class="competition-form__label-check">Разгромил отель</label>
+        </fieldset>
+        <fieldset class="competition-form__feedback">
+          <legend class="competition-form__legend">Опишите свои эмоции</legend>
+          <textarea placeholder="Можно прям в красках, не стесняясь в выражениях" class="competition-form__textarea"></textarea>
+        </fieldset>
+        <div class="competition-form__footer">
+          <input type="submit" value="Отправить форму" class="competition-form__btn">
+          <p class="competition-form__footnote"><span> <sup>* </sup></span>— обязательные для заполнения поля</p>
+        </div>
+      </form>
+    </main>
+    <footer class="page-footer page-footer--inner-page"><a class="page-footer__logo">Pink</a>
+      <div class="social"><a href="#" target="_blank" class="social__btn">
+          <svg width="17.5px" height="14.663px">
+            <use xlink:href="#social-tw"></use>
+          </svg></a><a href="#" target="_blank" class="social__btn">
+          <svg width="8.673px" height="18.944px">
+            <use xlink:href="#social-fb"></use>
+          </svg></a><a href="#" target="_blank" class="social__btn">
+          <svg width="14.64px" height="13.96px">
+            <use xlink:href="#social-yt"></use>
+          </svg></a></div><a href="https://htmlacademy.ru" target="_blank" class="page-footer__developer">Разработано</a>
+    </footer>
+    <script src="js/script--min.js"></script>
+  </body>
+</html>

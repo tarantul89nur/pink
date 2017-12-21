@@ -6,7 +6,7 @@
   background-size: cover;
   margin-bottom: 70px;
 
-  &--page-photo-margin {
+  &--page-inner-margin {
     margin-bottom: 100px;
   }
 }
@@ -200,7 +200,7 @@
   .page-header {
     margin-bottom: 50px;
 
-    &--page-photo-margin {
+    &--page-inner-margin {
       margin-bottom: 100px;
     }
   }
@@ -330,6 +330,10 @@
   .page-title {
     padding-top: 75px;
     padding-bottom: 140px;
+
+    &--max-width {
+      max-width: 520px;
+    }
   }
 }
 @media @mobile-widths {
@@ -347,7 +351,7 @@
       background-size: cover;
     }
 
-    &--page-photo-margin {
+    &--page-inner-margin {
       margin-bottom: 50px;
     }
   }
@@ -406,8 +410,12 @@
 
   .page-title {
     font-size: 24px;
-    line-height: 24px;
+    line-height: 26px;
     padding-top: 30px;
     padding-bottom: 80px;
+
+    &--max-width {
+      max-width: 250px;
+    }
   }
 }

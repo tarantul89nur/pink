@@ -1,19 +1,17 @@
 doctype html
 html
   head
-    title Pink - фотографии пользователей
+    title Pink - конкурс
     include jade/partials/head
     
   body
-    include jade/pages/page-photos/svg
     include jade/partials/social-svg
     
     header.page-header.page-header--page-inner-margin.page-header--bg-inner
-      include jade/pages/page-photos/header
+      include jade/pages/page-competition/header
       
     main 
-      include jade/pages/page-photos/photos
-      include jade/pages/page-photos/upload
+      include jade/pages/page-competition/form
       
     footer.page-footer.page-footer--inner-page
       include jade/partials/footer
