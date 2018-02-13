@@ -15,7 +15,8 @@ h4,
 h5,
 h6,
 p,
-ul {
+ul,
+input {
   padding: 0;
   margin: 0;
 }
@@ -1111,6 +1112,373 @@ body {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.competition-form {
+  width: 88%;
+  max-width: 940px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.competition-form__title {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  text-align: center;
+  max-width: 770px;
+  margin-bottom: 75px;
+}
+
+.competition-form__block-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 55px;
+}
+
+.competition-form__personal-data {
+  align-self: flex-start;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  width: 435px;
+  padding-top: 20px;
+}
+
+.competition-form__apps {
+  width: 435px;
+  padding: 40px 35px;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.competition-form__apps-wrapper {
+  align-self: flex-end;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.competition-form__contacts {
+  width: 100%;
+  padding: 30px 58px 20px;
+  margin-bottom: 63px;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.competition-form__contacts-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.competition-form__tel-wrapper,
+.competition-form__mail-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.competition-form__achievements {
+  width: 100%;
+  padding: 55px;
+  padding-bottom: 10px;
+  margin-bottom: 63px;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.competition-form__achievements-wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 165px;
+}
+
+.competition-form__feedback {
+  width: 100%;
+  padding: 35px 60px;
+  margin-bottom: 67px;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.competition-form__footer {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.competition-form__label-text,
+.competition-form__legend {
+  font-size: 14px;
+  line-height: 30px;
+  color: #d22856;
+  text-transform: uppercase;
+}
+
+.competition-form__label-text--margin-bottom {
+  margin-bottom: 56px;
+}
+
+.competition-form__label-text--flex {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.competition-form__label-text--large-padding {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.competition-form__legend {
+  padding: 0 20px;
+  text-align: center;
+}
+
+.competition-form__input {
+  position: relative;
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  padding: 10px 20px;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+  outline: none;
+  transition: .4s all;
+}
+
+.competition-form__input--grow {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+}
+
+.competition-form__input--margin {
+  margin-left: 20px;
+}
+
+.competition-form__input--large-width {
+  width: 375px;
+}
+
+.competition-form__input--padding-right {
+  padding-right: 63px;
+}
+
+.competition-form__input--icon-tel::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -63px;
+  width: 63px;
+  height: 100%;
+  background-color: #e5e5e5;
+}
+
+.competition-form__input:hover {
+  border-color: #283645;
+}
+
+.competition-form__input:focus {
+  border-color: #d22856;
+}
+
+.competition-form__label-radio {
+  position: relative;
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  padding-left: 95px;
+  margin-bottom: 35px;
+  cursor: pointer;
+}
+
+.competition-form__label-radio:last-child {
+  margin-bottom: 0;
+}
+
+.competition-form__label-radio::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 37px;
+  width: 40px;
+  height: 40px;
+  background-image: url('../img/radio-off.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: .4s all;
+}
+
+.competition-form__label-radio:hover::before {
+  background-image: url('../img/radio-off-hvr.png');
+}
+
+.competition-form__label-radio:active::before {
+  background-image: url('../img/radio-off-dwn.png');
+}
+
+.competition-form__input-radio {
+  display: none;
+}
+
+.competition-form__input-radio:checked + .competition-form__label-radio::before {
+  background-image: url('../img/radio-on.png');
+}
+
+.competition-form__input-radio:checked + .competition-form__label-radio:hover::before {
+  background-image: url('../img/radio-on-hvr.png');
+}
+
+.competition-form__input-radio:checked + .competition-form__label-radio:active::before {
+  background-image: url('../img/radio-on-dwn.png');
+}
+
+.competition-form__label-check {
+  position: relative;
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  padding-left: 60px;
+  margin-bottom: 45px;
+  cursor: pointer;
+}
+
+.competition-form__label-check::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  width: 39px;
+  height: 39px;
+  background-image: url('../img/checkbox-off.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.competition-form__label-check:hover::before {
+  background-image: url('../img/checkbox-off-hvr.png');
+}
+
+.competition-form__label-check:active::before {
+  background-image: url('../img/checkbox-off-dwn.png');
+}
+
+.competition-form__input-checkbox {
+  display: none;
+}
+
+.competition-form__input-checkbox:checked + .competition-form__label-check::before {
+  background-image: url('../img/checkbox-on.png');
+}
+
+.competition-form__input-checkbox:checked + .competition-form__label-check:hover::before {
+  background-image: url('../img/checkbox-on-hvr.png');
+}
+
+.competition-form__input-checkbox:checked + .competition-form__label-check:active::before {
+  background-image: url('../img/checkbox-on-dwn.png');
+}
+
+.competition-form__textarea {
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  padding: 20px;
+  width: 100%;
+  height: 135px;
+  resize: none;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+}
+
+.competition-form__btn {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px 55px;
+  background-color: #2aab6d;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .4s all;
+}
+
+.competition-form__btn:hover {
+  background-color: #1c9b5e;
+}
+
+.competition-form__btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.competition-form__footnote {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #283645;
+}
+
+.competition-form__footnote span {
+  color: #d22856;
+}
+
+.competition-form__svg {
+  fill: #d22856;
+}
+
+.competition-form__svg-wrapper {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 59px;
+  height: 50px;
+  background-color: #e5e5e5;
+  cursor: pointer;
+}
+
 .page-footer {
   width: 88%;
   max-width: 940px;
@@ -1644,6 +2012,300 @@ body {
 
   .upload__btn--post {
     margin-bottom: 24px;
+  }
+
+  .competition-form__title {
+    max-width: 500px;
+    margin-bottom: 65px;
+  }
+
+  .competition-form__block-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    margin-bottom: 55px;
+  }
+
+  .competition-form__personal-data {
+    width: 100%;
+    padding-top: 0;
+    margin-bottom: 55px;
+  }
+
+  .competition-form__apps {
+    width: 100%;
+  }
+
+  .competition-form__contacts {
+    margin-bottom: 55px;
+  }
+
+  .competition-form__contacts-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+
+  .competition-form__tel-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .competition-form__achievements {
+    padding: 50px 55px;
+    margin-bottom: 55px;
+  }
+
+  .competition-form__achievements-wrapper {
+    flex-wrap: nowrap;
+    max-height: none;
+  }
+
+  .competition-form__footer {
+    margin-bottom: 85px;
+  }
+
+  .competition-form__label-text,
+  .competition-form__legend {
+    font-size: 14px;
+    line-height: 30px;
+    color: #d22856;
+    text-transform: uppercase;
+  }
+
+  .competition-form__label-text--margin-bottom {
+    margin-bottom: 56px;
+  }
+
+  .competition-form__label-text--flex {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+
+  .competition-form__label-text--large-padding {
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+
+  .competition-form__legend {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .competition-form__input {
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    padding: 10px 20px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    outline: none;
+    transition: .4s all;
+  }
+
+  .competition-form__input--grow {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+  }
+
+  .competition-form__input--margin {
+    margin-left: 20px;
+  }
+
+  .competition-form__input--large-width {
+    width: 375px;
+  }
+
+  .competition-form__input--padding-right {
+    padding-right: 63px;
+  }
+
+  .competition-form__input--icon-tel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -63px;
+    width: 63px;
+    height: 100%;
+    background-color: #e5e5e5;
+  }
+
+  .competition-form__input:hover {
+    border-color: #283645;
+  }
+
+  .competition-form__input:focus {
+    border-color: #d22856;
+  }
+
+  .competition-form__label-radio {
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    padding-left: 95px;
+    margin-bottom: 35px;
+    cursor: pointer;
+  }
+
+  .competition-form__label-radio:last-child {
+    margin-bottom: 0;
+  }
+
+  .competition-form__label-radio::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 37px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../img/radio-off.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .4s all;
+  }
+
+  .competition-form__label-radio:hover::before {
+    background-image: url('../img/radio-off-hvr.png');
+  }
+
+  .competition-form__label-radio:active::before {
+    background-image: url('../img/radio-off-dwn.png');
+  }
+
+  .competition-form__input-radio {
+    display: none;
+  }
+
+  .competition-form__input-radio:checked + .competition-form__label-radio::before {
+    background-image: url('../img/radio-on.png');
+  }
+
+  .competition-form__input-radio:checked + .competition-form__label-radio:hover::before {
+    background-image: url('../img/radio-on-hvr.png');
+  }
+
+  .competition-form__input-radio:checked + .competition-form__label-radio:active::before {
+    background-image: url('../img/radio-on-dwn.png');
+  }
+
+  .competition-form__label-check {
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    padding-left: 60px;
+    margin-bottom: 45px;
+    cursor: pointer;
+  }
+
+  .competition-form__label-check::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    width: 39px;
+    height: 39px;
+    background-image: url('../img/checkbox-off.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .competition-form__label-check:hover::before {
+    background-image: url('../img/checkbox-off-hvr.png');
+  }
+
+  .competition-form__label-check:active::before {
+    background-image: url('../img/checkbox-off-dwn.png');
+  }
+
+  .competition-form__input-checkbox {
+    display: none;
+  }
+
+  .competition-form__input-checkbox:checked + .competition-form__label-check::before {
+    background-image: url('../img/checkbox-on.png');
+  }
+
+  .competition-form__input-checkbox:checked + .competition-form__label-check:hover::before {
+    background-image: url('../img/checkbox-on-hvr.png');
+  }
+
+  .competition-form__input-checkbox:checked + .competition-form__label-check:active::before {
+    background-image: url('../img/checkbox-on-dwn.png');
+  }
+
+  .competition-form__textarea {
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    padding: 20px;
+    width: 100%;
+    height: 135px;
+    resize: none;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+  }
+
+  .competition-form__btn {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 55px;
+    background-color: #2aab6d;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .4s all;
+  }
+
+  .competition-form__btn:hover {
+    background-color: #1c9b5e;
+  }
+
+  .competition-form__btn:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .competition-form__footnote {
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #283645;
+  }
+
+  .competition-form__footnote span {
+    color: #d22856;
+  }
+
+  .competition-form__svg {
+    fill: #d22856;
+  }
+
+  .competition-form__svg-wrapper {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 59px;
+    height: 50px;
+    background-color: #e5e5e5;
+    cursor: pointer;
   }
 
   .page-footer {

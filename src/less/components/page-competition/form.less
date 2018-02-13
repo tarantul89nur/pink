@@ -1,0 +1,613 @@
+.competition-form {
+  .container-fluid();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    text-align: center;
+    max-width: 770px;
+    margin-bottom: 75px;
+  }
+
+  &__block-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 55px;
+  }
+
+  &__personal-data {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    width: 435px;
+    padding-top: 20px;
+  }
+
+  &__apps {
+    width: 435px;
+    padding: 40px 35px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+  }
+
+  &__apps-wrapper {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts {
+    width: 100%;
+    padding: 30px 58px 20px;
+    margin-bottom: 63px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+  }
+
+  &__contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tel-wrapper,
+  &__mail-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__achievements {
+    width: 100%;
+    padding: 55px;
+    padding-bottom: 10px;
+    margin-bottom: 63px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+  }
+
+  &__achievements-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 165px;
+  }
+
+  &__feedback {
+    width: 100%;
+    padding: 35px 60px;
+    margin-bottom: 67px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
+  &__label-text,
+  &__legend {
+    font-size: 14px;
+    line-height: 30px;
+    color: #d22856;
+    text-transform: uppercase;
+  }
+
+  &__label-text {
+    &--margin-bottom {
+      margin-bottom: 56px;
+    }
+
+    &--flex {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &--large-padding {
+      padding-top: 10px;
+      padding-left: 20px;
+    }
+  }
+
+  &__legend {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  &__input {
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    padding: 10px 20px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    outline: none;
+    transition: .4s all;
+
+    &--grow {
+      flex-grow: 1;
+    }
+
+    &--margin {
+      margin-left: 20px;
+    }
+
+    &--large-width {
+      width: 375px;
+    }
+
+    &--padding-right {
+      padding-right: 63px;
+    }
+
+    &--icon-tel::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: -63px;
+      width: 63px;
+      height: 100%;
+      background-color: #e5e5e5;
+    }
+
+    &:hover {
+      border-color: #283645;
+    }
+
+    &:focus {
+      border-color: #d22856;
+    }
+  }
+
+  &__label-radio {
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    padding-left: 95px;
+    margin-bottom: 35px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%);
+      left: 37px;
+      width: 40px;
+      height: 40px;
+      background-image: url('../img/radio-off.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: .4s all;
+    }
+
+    &:hover::before {
+      background-image: url('../img/radio-off-hvr.png');
+    }
+
+    &:active::before {
+      background-image: url('../img/radio-off-dwn.png');
+    }
+  }
+
+  &__input-radio {
+    display: none;
+
+    &:checked+.competition-form__label-radio::before {
+      background-image: url('../img/radio-on.png');
+    }
+
+    &:checked+.competition-form__label-radio:hover::before {
+      background-image: url('../img/radio-on-hvr.png');
+    }
+
+    &:checked+.competition-form__label-radio:active::before {
+      background-image: url('../img/radio-on-dwn.png');
+    }
+  }
+
+  &__label-check {
+    position: relative;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    padding-left: 60px;
+    margin-bottom: 45px;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 39px;
+      height: 39px;
+      background-image: url('../img/checkbox-off.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover::before {
+      background-image: url('../img/checkbox-off-hvr.png');
+    }
+
+    &:active::before {
+      background-image: url('../img/checkbox-off-dwn.png');
+    }
+  }
+
+  &__input-checkbox {
+    display: none;
+
+    &:checked+.competition-form__label-check::before {
+      background-image: url('../img/checkbox-on.png');
+    }
+
+    &:checked+.competition-form__label-check:hover::before {
+      background-image: url('../img/checkbox-on-hvr.png');
+    }
+
+    &:checked+.competition-form__label-check:active::before {
+      background-image: url('../img/checkbox-on-dwn.png');
+    }
+  }
+
+  &__textarea {
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    padding: 20px;
+    width: 100%;
+    height: 135px;
+    resize: none;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+  }
+
+  &__btn {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px 55px;
+    background-color: #2aab6d;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .4s all;
+
+    &:hover {
+      background-color: #1c9b5e;
+    }
+
+    &:active {
+      color: rgba(255;255;255;.3);
+    }
+  }
+
+  &__footnote {
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #283645;
+
+    & span {
+      color: #d22856;
+    }
+  }
+
+  &__svg {
+    fill: #d22856;
+  }
+
+  &__svg-wrapper {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59px;
+    height: 50px;
+    background-color: #e5e5e5;
+    cursor: pointer;
+  }
+}
+
+@media @tablet-widths {
+  .competition-form {
+
+    &__title {
+      max-width: 500px;
+      margin-bottom: 65px;
+    }
+
+    &__block-wrapper {
+      flex-direction: column;
+      margin-bottom: 55px;
+    }
+
+    &__personal-data {
+      width: 100%;
+      padding-top: 0;
+      margin-bottom: 55px;
+    }
+
+    &__apps {
+      width: 100%;
+    }
+
+    &__contacts {
+      margin-bottom: 55px;
+    }
+
+    &__contacts-wrapper {
+      flex-direction: column;
+    }
+
+    &__tel-wrapper {
+      margin-bottom: 30px;
+    }
+
+    &__achievements {
+      padding: 50px 55px;
+      margin-bottom: 55px;
+    }
+
+    &__achievements-wrapper {
+      flex-wrap: nowrap;
+      max-height: none;
+    }
+
+    &__footer {
+      margin-bottom: 85px;
+    }
+
+    &__label-text {
+      &--margin-bottom {
+        margin-bottom: 56px;
+      }
+
+      &--flex {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      &--large-padding {
+        padding-top: 10px;
+        padding-left: 20px;
+      }
+    }
+
+    &__legend {
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    &__input {
+      position: relative;
+      font-size: 18px;
+      line-height: 30px;
+      color: #283645;
+      padding: 10px 20px;
+      border: 2px solid #e5e5e5;
+      border-radius: 2px;
+      outline: none;
+      transition: .4s all;
+
+      &--grow {
+        flex-grow: 1;
+      }
+
+      &--margin {
+        margin-left: 20px;
+      }
+
+      &--large-width {
+        width: 375px;
+      }
+
+      &--padding-right {
+        padding-right: 63px;
+      }
+
+      &--icon-tel::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: -63px;
+        width: 63px;
+        height: 100%;
+        background-color: #e5e5e5;
+      }
+
+      &:hover {
+        border-color: #283645;
+      }
+
+      &:focus {
+        border-color: #d22856;
+      }
+    }
+
+    &__label-radio {
+      position: relative;
+      font-size: 18px;
+      line-height: 30px;
+      color: #283645;
+      padding-left: 95px;
+      margin-bottom: 35px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        left: 37px;
+        width: 40px;
+        height: 40px;
+        background-image: url('../img/radio-off.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .4s all;
+      }
+
+      &:hover::before {
+        background-image: url('../img/radio-off-hvr.png');
+      }
+
+      &:active::before {
+        background-image: url('../img/radio-off-dwn.png');
+      }
+    }
+
+    &__input-radio {
+      display: none;
+
+      &:checked+.competition-form__label-radio::before {
+        background-image: url('../img/radio-on.png');
+      }
+
+      &:checked+.competition-form__label-radio:hover::before {
+        background-image: url('../img/radio-on-hvr.png');
+      }
+
+      &:checked+.competition-form__label-radio:active::before {
+        background-image: url('../img/radio-on-dwn.png');
+      }
+    }
+
+    &__label-check {
+      position: relative;
+      font-size: 18px;
+      line-height: 30px;
+      color: #283645;
+      padding-left: 60px;
+      margin-bottom: 45px;
+      cursor: pointer;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 39px;
+        height: 39px;
+        background-image: url('../img/checkbox-off.png');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &:hover::before {
+        background-image: url('../img/checkbox-off-hvr.png');
+      }
+
+      &:active::before {
+        background-image: url('../img/checkbox-off-dwn.png');
+      }
+    }
+
+    &__input-checkbox {
+      display: none;
+
+      &:checked+.competition-form__label-check::before {
+        background-image: url('../img/checkbox-on.png');
+      }
+
+      &:checked+.competition-form__label-check:hover::before {
+        background-image: url('../img/checkbox-on-hvr.png');
+      }
+
+      &:checked+.competition-form__label-check:active::before {
+        background-image: url('../img/checkbox-on-dwn.png');
+      }
+    }
+
+    &__textarea {
+      font-size: 18px;
+      line-height: 30px;
+      color: #283645;
+      padding: 20px;
+      width: 100%;
+      height: 135px;
+      resize: none;
+      border: 2px solid #e5e5e5;
+      border-radius: 2px;
+    }
+
+    &__btn {
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 15px 55px;
+      background-color: #2aab6d;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: .4s all;
+
+      &:hover {
+        background-color: #1c9b5e;
+      }
+
+      &:active {
+        color: rgba(255;255;255;.3);
+      }
+    }
+
+    &__footnote {
+      font-size: 14px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #283645;
+
+      & span {
+        color: #d22856;
+      }
+    }
+
+    &__svg {
+      fill: #d22856;
+    }
+
+    &__svg-wrapper {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 59px;
+      height: 50px;
+      background-color: #e5e5e5;
+      cursor: pointer;
+    }
+  }
+}
